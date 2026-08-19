@@ -1,0 +1,91 @@
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--ink);
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(12, 93, 255, 0.28), transparent 60%),
+    radial-gradient(900px 500px at -10% 20%, rgba(61, 224, 255, 0.08), transparent 55%),
+    linear-gradient(180deg, var(--blue-950), #061526 40%, var(--blue-950));
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+.logo,
+.hero__brand,
+.section__title,
+.statement__text,
+.service__num,
+.bike__name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: var(--ink-soft);
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--blue-400);
+}
+
+.section__title {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  margin-bottom: 0.85rem;
+  color: var(--white);
+}
+
+.section__desc {
+  max-width: 38rem;
+  font-size: 1.05rem;
+}
+
+::selection {
+  background: var(--blue-600);
+  color: white;
+}
+
+/* Ambient layers */
+.noise {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.cursor-glow {
+  pointer-events: none;
+  position: fixed;
+  width: 420px;
+  height: 420px;
+  margin: -210px 0 0 -210px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(43, 123, 255, 0.22), transparent 65%);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  mix-blend-mode: screen;
+}
+
+body.is-ready .cursor-glow {
+  opacity: 1;
+}
+
+@media (pointer: coarse) {
+  .cursor-glow {
+    display: none;
+  }
+}

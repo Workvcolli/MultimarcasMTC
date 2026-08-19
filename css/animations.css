@@ -1,0 +1,113 @@
+/* Reveal on scroll */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.8s var(--ease-out),
+    transform 0.8s var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.hero [data-reveal] {
+  --reveal-delay: 0ms;
+}
+
+.hero [data-reveal]:nth-child(1) { --reveal-delay: 80ms; }
+.hero [data-reveal]:nth-child(2) { --reveal-delay: 180ms; }
+.hero [data-reveal]:nth-child(3) { --reveal-delay: 280ms; }
+.hero [data-reveal]:nth-child(4) { --reveal-delay: 380ms; }
+
+.catalog__grid .bike:nth-child(1) { --reveal-delay: 0ms; }
+.catalog__grid .bike:nth-child(2) { --reveal-delay: 70ms; }
+.catalog__grid .bike:nth-child(3) { --reveal-delay: 140ms; }
+.catalog__grid .bike:nth-child(4) { --reveal-delay: 210ms; }
+.catalog__grid .bike:nth-child(5) { --reveal-delay: 280ms; }
+.catalog__grid .bike:nth-child(6) { --reveal-delay: 350ms; }
+
+.services__list .service:nth-child(1) { --reveal-delay: 0ms; }
+.services__list .service:nth-child(2) { --reveal-delay: 80ms; }
+.services__list .service:nth-child(3) { --reveal-delay: 160ms; }
+.services__list .service:nth-child(4) { --reveal-delay: 240ms; }
+
+/* Filtro de catálogo: prioridad sobre reveal */
+.bike.is-exiting {
+  opacity: 0 !important;
+  transform: translateY(12px) scale(0.96) !important;
+  pointer-events: none;
+  transition:
+    opacity 0.28s var(--ease-out),
+    transform 0.28s var(--ease-out) !important;
+}
+
+.bike.is-entering {
+  opacity: 0;
+  animation: bikeEnter 0.5s var(--ease-out) both;
+  animation-delay: var(--enter-delay, 0ms);
+}
+
+.catalog__grid.is-filtering {
+  pointer-events: none;
+}
+
+/* Keyframes */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes scrollPulse {
+  0% { transform: scaleY(0.35); transform-origin: top; opacity: 0.4; }
+  50% { transform: scaleY(1); transform-origin: top; opacity: 1; }
+  100% { transform: scaleY(0.35); transform-origin: bottom; opacity: 0.25; }
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes bikeEnter {
+  from {
+    opacity: 0;
+    transform: translateY(22px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+
+  .marquee__track {
+    animation: none;
+  }
+}
