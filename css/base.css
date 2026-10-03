@@ -5,9 +5,9 @@ body {
   line-height: 1.6;
   color: var(--ink);
   background:
-    radial-gradient(1200px 600px at 80% -10%, rgba(12, 93, 255, 0.28), transparent 60%),
-    radial-gradient(900px 500px at -10% 20%, rgba(61, 224, 255, 0.08), transparent 55%),
-    linear-gradient(180deg, var(--blue-950), #061526 40%, var(--blue-950));
+    radial-gradient(1200px 600px at 80% -10%, rgba(255, 109, 0, 0.18), transparent 60%),
+    radial-gradient(900px 500px at -10% 20%, rgba(2, 36, 100, 0.55), transparent 55%),
+    linear-gradient(180deg, var(--navy-deep), #021a4a 40%, var(--navy-deep));
   overflow-x: hidden;
 }
 
@@ -23,7 +23,7 @@ h3,
   font-family: var(--font-display);
   font-weight: 700;
   line-height: 1.05;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
 }
 
 p {
@@ -73,7 +73,7 @@ p {
   height: 420px;
   margin: -210px 0 0 -210px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(43, 123, 255, 0.22), transparent 65%);
+  background: radial-gradient(circle, rgba(255, 109, 0, 0.2), transparent 65%);
   z-index: 1;
   opacity: 0;
   transition: opacity 0.4s ease;

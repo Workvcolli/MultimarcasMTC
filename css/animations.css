@@ -34,6 +34,10 @@
 .services__list .service:nth-child(3) { --reveal-delay: 160ms; }
 .services__list .service:nth-child(4) { --reveal-delay: 240ms; }
 
+.stories__rail .story-chip:nth-child(1) { --reveal-delay: 0ms; }
+.stories__rail .story-chip:nth-child(2) { --reveal-delay: 80ms; }
+.stories__rail .story-chip:nth-child(3) { --reveal-delay: 160ms; }
+
 /* Filtro de catálogo: prioridad sobre reveal */
 .bike.is-exiting {
   opacity: 0 !important;

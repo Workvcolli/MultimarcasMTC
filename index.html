@@ -8,13 +8,14 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/layout.css" />
   <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/stories.css" />
   <link rel="stylesheet" href="css/animations.css" />
 </head>
 <body>
@@ -28,6 +29,7 @@
     </a>
 
     <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#historias">Historias</a>
       <a href="#catalogo">Catálogo</a>
       <a href="#servicios">Servicios</a>
       <a href="#local">Local</a>
@@ -84,6 +86,67 @@
         <span>MOTOMEL</span><span>CORVEN</span><span>ZANELLA</span><span>KELLER</span>
         <span>YAMAHA</span><span>HONDA</span><span>BAJAJ</span><span>BENELLI</span>
         <span>MOTOMEL</span><span>CORVEN</span><span>ZANELLA</span><span>KELLER</span>
+      </div>
+    </section>
+
+    <!-- HISTORIAS -->
+    <section class="section stories" id="historias">
+      <div class="container">
+        <header class="section__head reveal" data-reveal>
+          <p class="eyebrow">Promos de la semana</p>
+          <h2 class="section__title">Historias MTC</h2>
+          <p class="section__desc">Tocá una historia y recorré las novedades: parte de pago, Honda 0km y la súper promo del mes.</p>
+        </header>
+
+        <div class="stories__rail" id="storiesRail" role="list">
+          <button
+            class="story-chip"
+            role="listitem"
+            data-title="Recibimos tu moto usada"
+            data-brand="MTC Autos"
+            data-image="assets/images/stories/moto-usada.jpg"
+            data-alt="Campaña MTC: recibimos tu moto usada como parte de pago"
+            data-cta="Tasar mi moto"
+            data-wa="https://wa.me/5434346410955?text=Hola%20MTC%2C%20quiero%20tasar%20mi%20moto%20usada"
+          >
+            <span class="story-chip__ring">
+              <img class="story-chip__media" src="assets/images/stories/moto-usada.jpg" alt="" />
+            </span>
+            <span class="story-chip__label">Moto usada</span>
+          </button>
+
+          <button
+            class="story-chip"
+            role="listitem"
+            data-title="Honda sin vueltas"
+            data-brand="MTC Motos"
+            data-image="assets/images/stories/honda.jpg"
+            data-alt="Campaña MTC Motos: subite a tu Honda con financiación solo con DNI"
+            data-cta="Consultar Honda"
+            data-wa="https://wa.me/543433023616?text=Hola%20MTC%20Motos%2C%20quiero%20consultar%20por%20Honda"
+          >
+            <span class="story-chip__ring">
+              <img class="story-chip__media" src="assets/images/stories/honda.jpg" alt="" />
+            </span>
+            <span class="story-chip__label">Honda 0km</span>
+          </button>
+
+          <button
+            class="story-chip"
+            role="listitem"
+            data-title="Mondial Max Base"
+            data-brand="MTC Motos"
+            data-image="assets/images/stories/super-promo.jpg"
+            data-alt="Súper promo Mondial Max Base a $1.599.000"
+            data-cta="Quiero la promo"
+            data-wa="https://wa.me/543433023616?text=Hola%20MTC%20Motos%2C%20quiero%20la%20promo%20Mondial%20Max"
+          >
+            <span class="story-chip__ring">
+              <img class="story-chip__media" src="assets/images/stories/super-promo.jpg" alt="" />
+            </span>
+            <span class="story-chip__label">Súper promo</span>
+          </button>
+        </div>
       </div>
     </section>
 
@@ -457,9 +520,35 @@
     </div>
   </div>
 
+  <div class="story-viewer" id="storyViewer" hidden>
+    <div class="story-viewer__backdrop" data-close-story></div>
+    <div class="story-viewer__frame" role="dialog" aria-modal="true" aria-label="Historia MTC" tabindex="-1">
+      <div class="story-viewer__progress" id="storyViewerProgress" aria-hidden="true"></div>
+
+      <div class="story-viewer__top">
+        <img class="story-viewer__avatar" id="storyViewerAvatar" src="" alt="" />
+        <div class="story-viewer__meta">
+          <span class="story-viewer__brand" id="storyViewerBrand"></span>
+          <span class="story-viewer__title" id="storyViewerTitle"></span>
+        </div>
+        <button class="story-viewer__close" type="button" aria-label="Cerrar historia" data-close-story>×</button>
+      </div>
+
+      <img class="story-viewer__media" id="storyViewerImg" src="" alt="" />
+
+      <button class="story-viewer__hit story-viewer__hit--prev" type="button" aria-label="Historia anterior" data-story-prev></button>
+      <button class="story-viewer__hit story-viewer__hit--next" type="button" aria-label="Historia siguiente" data-story-next></button>
+
+      <a class="btn btn--primary story-viewer__cta" id="storyViewerCta" href="#" target="_blank" rel="noopener noreferrer">
+        Consultar por WhatsApp
+      </a>
+    </div>
+  </div>
+
   <script src="js/navigation.js" defer></script>
   <script src="js/catalog.js" defer></script>
   <script src="js/modal.js" defer></script>
+  <script src="js/stories.js" defer></script>
   <script src="js/animations.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>

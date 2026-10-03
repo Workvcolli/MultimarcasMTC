@@ -1,25 +1,33 @@
 :root {
-  /* Paleta MTC — azul eléctrico sobre asfalto frío */
-  --blue-950: #04101f;
-  --blue-900: #07203a;
-  --blue-800: #0a2f57;
-  --blue-600: #0c5dff;
-  --blue-500: #2b7bff;
-  --blue-400: #5c9dff;
-  --blue-300: #9bc2ff;
-  --cyan: #3de0ff;
+  /* Paleta oficial MTC */
+  --navy: #022464;
+  --navy-deep: #01102e;
+  --navy-mid: #03307a;
+  --orange: #ff6d00;
+  --orange-hot: #ff861a;
+  --ink-dark: #333333;
+  --white: #ffffff;
 
-  --ink: #e8f0ff;
-  --ink-soft: #a8bdd9;
-  --ink-mute: #6f87a8;
-  --white: #f7faff;
+  --blue-950: var(--navy-deep);
+  --blue-900: var(--navy);
+  --blue-800: var(--navy-mid);
+  --blue-600: var(--orange);
+  --blue-500: var(--orange-hot);
+  --blue-400: #ff9a3d;
+  --blue-300: #ffc08a;
+  --cyan: var(--orange);
 
-  --surface: rgba(8, 24, 44, 0.72);
-  --line: rgba(155, 194, 255, 0.16);
-  --glow: rgba(12, 93, 255, 0.45);
+  --ink: #ffffff;
+  --ink-soft: rgba(255, 255, 255, 0.74);
+  --ink-mute: rgba(255, 255, 255, 0.5);
 
-  --font-display: "Syne", system-ui, sans-serif;
-  --font-body: "Outfit", system-ui, sans-serif;
+  --surface: rgba(2, 36, 100, 0.72);
+  --line: rgba(255, 255, 255, 0.14);
+  --glow: rgba(255, 109, 0, 0.42);
+  --overlay: rgba(1, 16, 46, 0.82);
+
+  --font-display: "Oswald", "Montserrat", system-ui, sans-serif;
+  --font-body: "Montserrat", system-ui, sans-serif;
 
   --radius-sm: 10px;
   --radius: 18px;
