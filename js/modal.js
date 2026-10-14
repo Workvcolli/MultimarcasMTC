@@ -41,10 +41,9 @@
     els.desc.textContent = bike.dataset.desc || "";
 
     els.specs.innerHTML = "";
-    specLabels.forEach(([key, label]) => {
-      const value = bike.dataset[key];
-      if (!value) return;
 
+    const addSpec = (label, value) => {
+      if (!value) return;
       const row = document.createElement("div");
       const dt = document.createElement("dt");
       const dd = document.createElement("dd");
@@ -52,11 +51,28 @@
       dd.textContent = value;
       row.append(dt, dd);
       els.specs.appendChild(row);
-    });
+    };
+
+    let customSpecs = [];
+    if (bike.dataset.specs) {
+      try {
+        customSpecs = JSON.parse(bike.dataset.specs);
+      } catch (error) {
+        customSpecs = [];
+      }
+    }
+
+    if (Array.isArray(customSpecs) && customSpecs.length) {
+      customSpecs.forEach((item) => addSpec(item?.label, item?.value));
+    } else {
+      specLabels.forEach(([key, label]) => addSpec(label, bike.dataset[key]));
+    }
 
     const msg = encodeURIComponent(`Hola MTC Motos, quiero consultar por ${name}`);
     els.whatsapp.href = `https://wa.me/543433023616?text=${msg}`;
   };
+
+  const isMobileModal = () => window.matchMedia("(max-width: 819px)").matches;
 
   const openModal = (bike) => {
     if (closing) return;
@@ -67,7 +83,14 @@
     modal.hidden = false;
     document.body.classList.add("modal-open");
 
+    if (isMobileModal()) {
+      dialog.scrollTop = 0;
+    }
+
     requestAnimationFrame(() => {
+      if (isMobileModal()) {
+        dialog.scrollTop = 0;
+      }
       modal.classList.add("is-open");
       dialog.focus({ preventScroll: true });
     });
