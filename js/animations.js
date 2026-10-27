@@ -1,8 +1,28 @@
 (function () {
   const revealItems = document.querySelectorAll("[data-reveal]");
-  const heroImg = document.querySelector(".hero__img");
+  const heroMedia = document.querySelector(".hero__video, .hero__img");
+  const heroVideo = document.querySelector(".hero__video");
   const statementImg = document.querySelector(".statement__bg img");
   const glow = document.querySelector(".cursor-glow");
+
+  // Video de portada en loop (respeta reduced motion)
+  if (heroVideo) {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion) {
+      heroVideo.pause();
+      heroVideo.removeAttribute("autoplay");
+    } else {
+      const play = () => {
+        const p = heroVideo.play();
+        if (p && typeof p.catch === "function") p.catch(() => {});
+      };
+      play();
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden) heroVideo.pause();
+        else play();
+      });
+    }
+  }
 
   if ("IntersectionObserver" in window) {
     const observer = new IntersectionObserver(
@@ -32,8 +52,8 @@
     requestAnimationFrame(() => {
       const y = window.scrollY;
 
-      if (heroImg) {
-        heroImg.style.transform = `scale(1.08) translate3d(0, ${y * 0.18}px, 0)`;
+      if (heroMedia) {
+        heroMedia.style.transform = `scale(1.08) translate3d(0, ${y * 0.18}px, 0)`;
       }
 
       if (statementImg) {
