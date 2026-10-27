@@ -1,120 +1,73 @@
 (function () {
-  const filters = document.querySelectorAll(".filter");
+  const filters = document.querySelectorAll(".catalog .filter");
   const grid = document.getElementById("catalogGrid");
-  const bikes = Array.from(document.querySelectorAll(".bike"));
+  const empty = document.getElementById("catalogEmpty");
+  const bikes = grid ? Array.from(grid.querySelectorAll(".bike")) : [];
 
   if (!filters.length || !bikes.length || !grid) return;
 
-  const EXIT_MS = 280;
-  const STAGGER_MS = 70;
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let activeFilter = null;
 
-  let animating = false;
-  let pendingFilter = null;
+  const matches = (bike, value) => {
+    if (!value) return false;
+    return value === "all" || bike.dataset.category === value;
+  };
 
-  const matches = (bike, value) => value === "all" || bike.dataset.category === value;
-
-  const clearAnimClasses = (bike) => {
-    bike.classList.remove("is-exiting", "is-entering");
-    bike.style.removeProperty("--enter-delay");
+  const updateEmpty = (value) => {
+    const showEmpty = !value;
+    if (empty) empty.hidden = !showEmpty;
+    grid.classList.toggle("is-empty", showEmpty);
   };
 
   const applyFilter = (value) => {
-    if (animating) {
-      pendingFilter = value;
-      return;
-    }
+    activeFilter = value;
+    updateEmpty(value);
 
-    const toHide = [];
-    const toShow = [];
-    const staying = [];
-
+    // Instantáneo: sin delays ni animaciones de entrada/salida
     bikes.forEach((bike) => {
-      const shouldShow = matches(bike, value);
-      const isHidden = bike.classList.contains("is-hidden");
-
-      if (shouldShow && isHidden) toShow.push(bike);
-      else if (!shouldShow && !isHidden) toHide.push(bike);
-      else if (shouldShow && !isHidden) staying.push(bike);
+      const show = matches(bike, value);
+      bike.classList.remove("is-exiting", "is-entering");
+      bike.style.removeProperty("--enter-delay");
+      bike.classList.toggle("is-hidden", !show);
+      if (show) bike.classList.add("is-visible");
     });
+  };
 
-    // Nada que animar
-    if (!toHide.length && !toShow.length) return;
-
-    if (reduceMotion) {
-      bikes.forEach((bike) => {
-        clearAnimClasses(bike);
-        bike.classList.toggle("is-hidden", !matches(bike, value));
-      });
-      return;
-    }
-
-    animating = true;
-    grid.classList.add("is-filtering");
-
-    // 1) Salida suave de las que no entran
-    toHide.forEach((bike) => {
-      clearAnimClasses(bike);
-      bike.classList.add("is-exiting");
+  const setActiveButton = (btn) => {
+    filters.forEach((item) => {
+      const active = btn != null && item === btn;
+      item.classList.toggle("is-active", active);
+      item.setAttribute("aria-selected", String(active));
     });
-
-    // Las que se quedan, sin re-animación
-    staying.forEach(clearAnimClasses);
-
-    window.setTimeout(() => {
-      toHide.forEach((bike) => {
-        bike.classList.add("is-hidden");
-        clearAnimClasses(bike);
-      });
-
-      // 2) Entrada escalonada de las nuevas
-      toShow.forEach((bike, index) => {
-        clearAnimClasses(bike);
-        bike.classList.remove("is-hidden");
-        bike.style.setProperty("--enter-delay", `${index * STAGGER_MS}ms`);
-
-        // Forzar reflow para que la animación arranque limpia
-        void bike.offsetWidth;
-        bike.classList.add("is-entering");
-
-        const onEnd = (event) => {
-          if (event.animationName !== "bikeEnter") return;
-          bike.classList.remove("is-entering");
-          bike.style.removeProperty("--enter-delay");
-          bike.removeEventListener("animationend", onEnd);
-        };
-
-        bike.addEventListener("animationend", onEnd);
-      });
-
-      const enterTotal = toShow.length
-        ? EXIT_MS + (toShow.length - 1) * STAGGER_MS + 520
-        : EXIT_MS;
-
-      window.setTimeout(() => {
-        grid.classList.remove("is-filtering");
-        animating = false;
-
-        if (pendingFilter !== null) {
-          const next = pendingFilter;
-          pendingFilter = null;
-          applyFilter(next);
-        }
-      }, Math.max(enterTotal - EXIT_MS, 320));
-    }, EXIT_MS);
   };
 
   filters.forEach((btn) => {
     btn.addEventListener("click", () => {
       const value = btn.dataset.filter;
 
-      filters.forEach((item) => {
-        const active = item === btn;
-        item.classList.toggle("is-active", active);
-        item.setAttribute("aria-selected", String(active));
-      });
+      if (btn.classList.contains("is-active")) {
+        setActiveButton(null);
+        applyFilter(null);
+        return;
+      }
 
+      setActiveButton(btn);
       applyFilter(value);
     });
   });
+
+  // Estado inicial: sin filtro, sin fichas
+  setActiveButton(null);
+  applyFilter(null);
+
+  grid.applyCatalogFilter = (value) => {
+    const btn = Array.from(filters).find((item) => item.dataset.filter === value) || null;
+    if (!btn) {
+      setActiveButton(null);
+      applyFilter(null);
+      return;
+    }
+    setActiveButton(btn);
+    applyFilter(value);
+  };
 })();

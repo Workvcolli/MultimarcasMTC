@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="MTC Motos — Concesionaria multimarcas en Paraná. Motos 0km y usadas, repuestos y financiación." />
-  <title>MTC Motos | Multimarcas Paraná</title>
+  <meta name="description" content="MTC Motos — Motos 0km y usadas en Paraná. Financiación solo con DNI, parte de pago, repuestos y asesoramiento." />
+  <title>MTC Motos | Solo con DNI · Paraná</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="css/layout.css" />
   <link rel="stylesheet" href="css/components.css" />
   <link rel="stylesheet" href="css/stories.css" />
+  <link rel="stylesheet" href="css/commerce.css" />
   <link rel="stylesheet" href="css/animations.css" />
 </head>
 <body>
@@ -29,15 +30,16 @@
     </a>
 
     <nav class="nav" id="nav" aria-label="Principal">
-      <a href="#historias">Historias</a>
+      <a href="#financiacion">Solo DNI</a>
       <a href="#catalogo">Catálogo</a>
-      <a href="#servicios">Servicios</a>
+      <a href="#simulador">Cuotas</a>
+      <a href="#usadas">Usadas</a>
       <a href="#local">Local</a>
       <a href="#contacto">Contacto</a>
     </nav>
 
-    <a class="btn btn--ghost header__cta" href="https://wa.me/543433023616" target="_blank" rel="noopener noreferrer">
-      WhatsApp
+    <a class="btn btn--ghost header__cta" href="https://wa.me/543433023616?text=Hola%20MTC%20Motos%2C%20quiero%20financiar%20una%20moto%20solo%20con%20DNI" target="_blank" rel="noopener noreferrer">
+      Solo con DNI
     </a>
 
     <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
@@ -71,10 +73,11 @@
           <span class="hero__brand-line hero__brand-line--accent">MOTOS</span>
         </h1>
         <p class="hero__lead reveal" data-reveal>
-          Motos 0km y usadas con la energía que buscás. Financiación, parte de pago y asesoramiento real.
+          Motos 0km y usadas. Te las llevás con financiación <strong>solo con DNI</strong>, parte de pago y asesoramiento real.
         </p>
         <div class="hero__actions reveal" data-reveal>
-          <a class="btn btn--primary" href="#catalogo">Ver catálogo</a>
+          <a class="btn btn--primary" href="https://wa.me/543433023616?text=Hola%20MTC%20Motos%2C%20quiero%20financiar%20una%20moto%20solo%20con%20DNI" target="_blank" rel="noopener noreferrer">Financiá con DNI</a>
+          <a class="btn btn--outline" href="#catalogo">Ver catálogo</a>
         </div>
       </div>
 
@@ -89,8 +92,49 @@
       <div class="marquee__track">
         <span>MOTOMEL</span><span>KELLER</span><span>GUERRERO</span><span>ZANELLA</span>
         <span>HONDA</span><span>YAMAHA</span>
+        <span>SOLO CON DNI</span><span>PARTE DE PAGO</span>
         <span>MOTOMEL</span><span>KELLER</span><span>GUERRERO</span><span>ZANELLA</span>
         <span>HONDA</span><span>YAMAHA</span>
+        <span>SOLO CON DNI</span><span>PARTE DE PAGO</span>
+      </div>
+    </section>
+
+    <!-- SOLO CON DNI -->
+    <section class="section dni" id="financiacion">
+      <div class="container dni__grid">
+        <div class="reveal" data-reveal>
+          <p class="eyebrow">Financiación</p>
+          <h2 class="section__title dni__title">Tu moto solo con DNI</h2>
+          <p class="dni__lead">
+            En MTC simplificamos el trámite: te ayudamos a armar el plan, te mostramos las cuotas y salís rodando. Sin vueltas innecesarias.
+          </p>
+          <div class="dni__actions">
+            <a class="btn btn--primary" href="https://wa.me/543433023616?text=Hola%20MTC%20Motos%2C%20quiero%20armar%20un%20plan%20solo%20con%20DNI" target="_blank" rel="noopener noreferrer">Armar mi plan</a>
+            <a class="btn btn--outline" href="#simulador">Simular cuotas</a>
+          </div>
+        </div>
+
+        <aside class="dni__card reveal" data-reveal>
+          <h3>¿Qué necesitás?</h3>
+          <ul class="dni__list">
+            <li>
+              <span class="dni__check" aria-hidden="true">✓</span>
+              <span><strong>DNI</strong> vigente</span>
+            </li>
+            <li>
+              <span class="dni__check" aria-hidden="true">✓</span>
+              <span><strong>Ser mayor de edad</strong> y residir en la zona</span>
+            </li>
+            <li>
+              <span class="dni__check" aria-hidden="true">✓</span>
+              <span><strong>Comprobante de ingresos</strong> si el plan lo pide (te orientamos)</span>
+            </li>
+            <li>
+              <span class="dni__check" aria-hidden="true">✓</span>
+              <span><strong>Anticipo flexible</strong> — también con tu moto como parte de pago</span>
+            </li>
+          </ul>
+        </aside>
       </div>
     </section>
 
@@ -155,17 +199,139 @@
       </div>
     </section>
 
+    <!-- DESTACADAS / OFERTAS -->
+    <section class="section featured" id="ofertas">
+      <div class="container">
+        <header class="section__head reveal" data-reveal>
+          <p class="eyebrow">Ofertas del mes</p>
+          <h2 class="section__title">Más consultadas</h2>
+          <p class="section__desc">Las que más piden con financiación solo con DNI. Tocá para ver ficha o escribinos por la cuota.</p>
+        </header>
+
+        <div class="featured__grid" id="featuredGrid">
+          <article class="bike" data-category="motomel" data-reveal tabindex="0" role="button" aria-label="Ver especificaciones de Motomel Blitz 110 Plus" data-name="Motomel Blitz 110 Plus" data-tag="Motomel" data-meta="Motomel · 0km · Destacada" data-desc="Consultanos por disponibilidad, colores y financiación solo con DNI." data-specs="[{&quot;label&quot;:&quot;Cilindrada&quot;,&quot;value&quot;:&quot;110 cm³&quot;},{&quot;label&quot;:&quot;Financiación&quot;,&quot;value&quot;:&quot;Solo con DNI&quot;},{&quot;label&quot;:&quot;Estado&quot;,&quot;value&quot;:&quot;0km&quot;}]">
+            <div class="bike__media">
+              <img src="assets/images/catalog/marca-mtc-motos-17.png" alt="Motomel Blitz 110 Plus" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
+              <span class="bike__tag">Motomel</span>
+            </div>
+            <div class="bike__body">
+              <h3 class="bike__name">Motomel Blitz 110 Plus</h3>
+              <p class="bike__meta">Motomel · 0km · Destacada</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
+              <span class="bike__link">Ver especificaciones</span>
+            </div>
+          </article>
+
+          <article class="bike" data-category="guerrero" data-reveal tabindex="0" role="button" aria-label="Ver especificaciones de Guerrero Trip Full Evo" data-name="Guerrero Trip Full Evo" data-tag="Guerrero" data-meta="Guerrero · 0km · Destacada" data-desc="Consultanos por disponibilidad, colores y financiación solo con DNI." data-specs="[{&quot;label&quot;:&quot;Cilindrada&quot;,&quot;value&quot;:&quot;110 cm³&quot;},{&quot;label&quot;:&quot;Financiación&quot;,&quot;value&quot;:&quot;Solo con DNI&quot;},{&quot;label&quot;:&quot;Estado&quot;,&quot;value&quot;:&quot;0km&quot;}]">
+            <div class="bike__media">
+              <img src="assets/images/catalog/marca-mtc-motos-13.png" alt="Guerrero Trip Full Evo" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
+              <span class="bike__tag">Guerrero</span>
+            </div>
+            <div class="bike__body">
+              <h3 class="bike__name">Guerrero Trip Full Evo</h3>
+              <p class="bike__meta">Guerrero · 0km · Destacada</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
+              <span class="bike__link">Ver especificaciones</span>
+            </div>
+          </article>
+
+          <article class="bike" data-category="honda" data-reveal tabindex="0" role="button" aria-label="Ver especificaciones de Honda Biz" data-name="Honda Biz" data-tag="Honda" data-meta="Honda · 0km · Destacada" data-desc="Modelo nuevo. Consultanos por financiación solo con DNI." data-specs="[{&quot;label&quot;:&quot;Cilindrada&quot;,&quot;value&quot;:&quot;110 cm³&quot;},{&quot;label&quot;:&quot;Financiación&quot;,&quot;value&quot;:&quot;Solo con DNI&quot;},{&quot;label&quot;:&quot;Estado&quot;,&quot;value&quot;:&quot;0km&quot;}]">
+            <div class="bike__media">
+              <img src="assets/images/catalog/67c-221c-10img-web-wave-2025-negro-e1741890525617.jpg" alt="Honda Biz" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Nuevo</span>
+              </div>
+              <span class="bike__tag">Honda</span>
+            </div>
+            <div class="bike__body">
+              <h3 class="bike__name">Honda Biz</h3>
+              <p class="bike__meta">Honda · 0km · Destacada</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
+              <span class="bike__link">Ver especificaciones</span>
+            </div>
+          </article>
+
+          <article class="bike" data-category="honda" data-reveal tabindex="0" role="button" aria-label="Ver especificaciones de Honda Wave 110 S" data-name="Honda Wave 110 S" data-tag="Honda" data-meta="Honda · 0km · Destacada" data-desc="Consultanos por disponibilidad, colores y financiación solo con DNI." data-specs="[{&quot;label&quot;:&quot;Cilindrada&quot;,&quot;value&quot;:&quot;109 CC&quot;},{&quot;label&quot;:&quot;Financiación&quot;,&quot;value&quot;:&quot;Solo con DNI&quot;},{&quot;label&quot;:&quot;Estado&quot;,&quot;value&quot;:&quot;0km&quot;}]">
+            <div class="bike__media">
+              <img src="assets/images/catalog/67c-221c-10img-web-wave-2025-negro-e1741890525617.jpg" alt="Honda Wave 110 S" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
+              <span class="bike__tag">Honda</span>
+            </div>
+            <div class="bike__body">
+              <h3 class="bike__name">Honda Wave 110 S</h3>
+              <p class="bike__meta">Honda · 0km · Destacada</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
+              <span class="bike__link">Ver especificaciones</span>
+            </div>
+          </article>
+
+          <article class="bike" data-category="motomel" data-reveal tabindex="0" role="button" aria-label="Ver especificaciones de Motomel Skua 150" data-name="Motomel Skua 150" data-tag="Motomel" data-meta="Motomel · 0km · Destacada" data-desc="Consultanos por disponibilidad, colores y financiación solo con DNI." data-specs="[{&quot;label&quot;:&quot;Cilindrada&quot;,&quot;value&quot;:&quot;150 cm³&quot;},{&quot;label&quot;:&quot;Financiación&quot;,&quot;value&quot;:&quot;Solo con DNI&quot;},{&quot;label&quot;:&quot;Estado&quot;,&quot;value&quot;:&quot;0km&quot;}]">
+            <div class="bike__media">
+              <img src="assets/images/catalog/marca-mtc-motos-10-1.png" alt="Motomel Skua 150" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
+              <span class="bike__tag">Motomel</span>
+            </div>
+            <div class="bike__body">
+              <h3 class="bike__name">Motomel Skua 150</h3>
+              <p class="bike__meta">Motomel · 0km · Destacada</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
+              <span class="bike__link">Ver especificaciones</span>
+            </div>
+          </article>
+
+          <article class="bike" data-category="guerrero" data-reveal tabindex="0" role="button" aria-label="Ver especificaciones de Guerrero Trip 110 Full" data-name="Guerrero Trip 110 Full" data-tag="Guerrero" data-meta="Guerrero · 0km · Destacada" data-desc="Consultanos por disponibilidad, colores y financiación solo con DNI." data-specs="[{&quot;label&quot;:&quot;Cilindrada&quot;,&quot;value&quot;:&quot;110 cm³&quot;},{&quot;label&quot;:&quot;Financiación&quot;,&quot;value&quot;:&quot;Solo con DNI&quot;},{&quot;label&quot;:&quot;Estado&quot;,&quot;value&quot;:&quot;0km&quot;}]">
+            <div class="bike__media">
+              <img src="assets/images/catalog/marca-mtc-motos-13.png" alt="Guerrero Trip 110 Full" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
+              <span class="bike__tag">Guerrero</span>
+            </div>
+            <div class="bike__body">
+              <h3 class="bike__name">Guerrero Trip 110 Full</h3>
+              <p class="bike__meta">Guerrero · 0km · Destacada</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
+              <span class="bike__link">Ver especificaciones</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- CATÁLOGO -->
     <section class="section catalog" id="catalogo">
       <div class="container">
         <header class="section__head reveal" data-reveal>
           <p class="eyebrow">Stock</p>
           <h2 class="section__title">Catálogo completo</h2>
-          <p class="section__desc">Las motos de MTC. Filtrá por marca y consultanos por disponibilidad, colores y financiación.</p>
+          <p class="section__desc">Elegí un filtro para ver el stock. Sin filtro activo el listado queda vacío para no alargar el scroll.</p>
         </header>
 
         <div class="filters reveal" data-reveal role="tablist" aria-label="Filtrar por marca">
-          <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">Todas</button>
+          <button class="filter" data-filter="all" role="tab" aria-selected="false">Todas</button>
+          <button class="filter" data-filter="usadas" role="tab" aria-selected="false">Usadas</button>
           <button class="filter" data-filter="zanella" role="tab" aria-selected="false">Zanella</button>
           <button class="filter" data-filter="yamaha" role="tab" aria-selected="false">Yamaha</button>
           <button class="filter" data-filter="motomel" role="tab" aria-selected="false">Motomel</button>
@@ -174,7 +340,9 @@
           <button class="filter" data-filter="guerrero" role="tab" aria-selected="false">Guerrero</button>
         </div>
 
-        <div class="catalog__grid" id="catalogGrid">
+        <p class="catalog__empty" id="catalogEmpty">Elegí <strong>Todas</strong> o una marca para ver las motos.</p>
+
+        <div class="catalog__grid is-empty" id="catalogGrid">
           <article
             class="bike"
             data-category="motomel"
@@ -190,11 +358,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/marca-mtc-motos-09-1.png" alt="Motomel Strato Euro 150" loading="eager" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Motomel</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Motomel Strato Euro 150</h3>
               <p class="bike__meta">Motomel · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -213,11 +387,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/marca-mtc-motos-16-1.png" alt="Motomel Max 110" loading="eager" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Motomel</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Motomel Max 110</h3>
               <p class="bike__meta">Motomel · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -236,11 +416,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/marca-mtc-motos-12-1.png" alt="Motomel CG 150 S2 Std" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Motomel</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Motomel CG 150 S2 Std</h3>
               <p class="bike__meta">Motomel · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -259,11 +445,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/marca-mtc-motos-14-1.png" alt="Motomel CG 150 S2 Aleación" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Motomel</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Motomel CG 150 S2 Aleación</h3>
               <p class="bike__meta">Motomel · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -282,11 +474,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/marca-mtc-motos-08-1.png" alt="Motomel Victory 150" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Motomel</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Motomel Victory 150</h3>
               <p class="bike__meta">Motomel · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -305,11 +503,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/marca-mtc-motos-11-1.png" alt="Motomel Skua 125 Xtreme" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Motomel</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Motomel Skua 125 Xtreme</h3>
               <p class="bike__meta">Motomel · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -328,11 +532,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/marca-mtc-motos-10-1.png" alt="Motomel Skua 150" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Motomel</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Motomel Skua 150</h3>
               <p class="bike__meta">Motomel · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -351,11 +561,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/marca-mtc-motos-10-1.png" alt="Motomel Skua Silver 150" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Motomel</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Motomel Skua Silver 150</h3>
               <p class="bike__meta">Motomel · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -374,11 +590,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/marca-mtc-motos-10-1.png" alt="Motomel XMM 250" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Motomel</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Motomel XMM 250</h3>
               <p class="bike__meta">Motomel · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -397,11 +619,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/marca-mtc-motos-16-1.png" alt="Motomel Blitz 110 Std" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Motomel</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Motomel Blitz 110 Std</h3>
               <p class="bike__meta">Motomel · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -420,11 +648,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/marca-mtc-motos-17.png" alt="Motomel Blitz 110 Aleación" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Motomel</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Motomel Blitz 110 Aleación</h3>
               <p class="bike__meta">Motomel · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -443,11 +677,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/marca-mtc-motos-17.png" alt="Motomel Blitz 110 Plus" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Motomel</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Motomel Blitz 110 Plus</h3>
               <p class="bike__meta">Motomel · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -466,11 +706,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/214-12.png" alt="Keller Cronos 110 std" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Keller</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Keller Cronos 110 std</h3>
               <p class="bike__meta">Keller · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -489,11 +735,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/214-08.png" alt="Keller Cronos 110 Full" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Keller</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Keller Cronos 110 Full</h3>
               <p class="bike__meta">Keller · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -512,11 +764,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/214-09.png" alt="Keller Miracle 200" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Keller</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Keller Miracle 200</h3>
               <p class="bike__meta">Keller · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -535,11 +793,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/214-11.png" alt="Keller Stratus plus 150" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Keller</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Keller Stratus plus 150</h3>
               <p class="bike__meta">Keller · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -558,11 +822,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/214-10.png" alt="Keller Miracle 150" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Keller</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Keller Miracle 150</h3>
               <p class="bike__meta">Keller · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -581,11 +851,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/marca-mtc-motos-10.png" alt="Guerrero Day 70" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Guerrero</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Guerrero Day 70</h3>
               <p class="bike__meta">Guerrero · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -604,11 +880,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/marca-mtc-motos-14.png" alt="Guerrero G 110 Econo Classic" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Guerrero</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Guerrero G 110 Econo Classic</h3>
               <p class="bike__meta">Guerrero · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -627,11 +909,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/marca-mtc-motos-14.png" alt="Guerrero Trip 110 Econo" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Guerrero</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Guerrero Trip 110 Econo</h3>
               <p class="bike__meta">Guerrero · 0km · Arranque eléctrico</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -650,11 +938,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/marca-mtc-motos-13.png" alt="Guerrero Trip 110 Full" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Guerrero</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Guerrero Trip 110 Full</h3>
               <p class="bike__meta">Guerrero · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -673,11 +967,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/marca-mtc-motos-13.png" alt="Guerrero Trip Full Evo" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Guerrero</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Guerrero Trip Full Evo</h3>
               <p class="bike__meta">Guerrero · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -696,11 +996,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/marca-mtc-motos-12.png" alt="Guerrero Trip 110 Tunning" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Guerrero</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Guerrero Trip 110 Tunning</h3>
               <p class="bike__meta">Guerrero · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -719,11 +1025,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/marca-mtc-motos-12.png" alt="Guerrero Trip 125 Plus" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Guerrero</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Guerrero Trip 125 Plus</h3>
               <p class="bike__meta">Guerrero · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -742,11 +1054,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/marca-mtc-motos-11.png" alt="Guerrero Urban 150" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Guerrero</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Guerrero Urban 150</h3>
               <p class="bike__meta">Guerrero · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -765,11 +1083,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/marca-mtc-motos-16.png" alt="Guerrero GXL 150" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Guerrero</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Guerrero GXL 150</h3>
               <p class="bike__meta">Guerrero · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -788,11 +1112,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/Zanella-Due-Gris-Oscura_0522.png" alt="Zanella Due Classic 110" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Zanella</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Zanella Due Classic 110</h3>
               <p class="bike__meta">Zanella · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -811,11 +1141,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/ZB-110-LT.png" alt="Zanella Zb 110 LT" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Zanella</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Zanella Zb 110 LT</h3>
               <p class="bike__meta">Zanella · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -834,11 +1170,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/ZB-110-RT.png" alt="Zanella Zb 110 RT" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Zanella</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Zanella Zb 110 RT</h3>
               <p class="bike__meta">Zanella · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -857,11 +1199,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/Imagen-cabecera.png" alt="Zanella Zb 125 R" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Zanella</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Zanella Zb 125 R</h3>
               <p class="bike__meta">Zanella · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -880,11 +1228,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/RX-150-Z7-LT.png" alt="Zanella Rx 150 z7" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Zanella</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Zanella Rx 150 z7</h3>
               <p class="bike__meta">Zanella · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -903,11 +1257,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/RX-150-Z7-RT_Color4.png" alt="Zanella Rx 150 z7 Full" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Zanella</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Zanella Rx 150 z7 Full</h3>
               <p class="bike__meta">Zanella · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -926,11 +1286,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/ceccatoR150_lateralRojo.png" alt="Zanella Ceccato 150" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Zanella</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Zanella Ceccato 150</h3>
               <p class="bike__meta">Zanella · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -949,11 +1315,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/zt150_lateral01-1.png" alt="Zanella Zt 150" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Zanella</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Zanella Zt 150</h3>
               <p class="bike__meta">Zanella · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -972,11 +1344,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/67c-221c-10img-web-wave-2025-negro-e1741890525617.jpg" alt="Honda Wave 110 S" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Honda</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Honda Wave 110 S</h3>
               <p class="bike__meta">Honda · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -995,11 +1373,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/67c-221c-10img-web-wave-2025-negro-e1741890525617.jpg" alt="Honda Biz" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Honda</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Honda Biz</h3>
               <p class="bike__meta">Honda · 0km · Modelo nuevo</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -1018,11 +1402,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/marca-mtc-motos-09.png" alt="Honda Navi 110" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Honda</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Honda Navi 110</h3>
               <p class="bike__meta">Honda · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -1041,11 +1431,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/marca-mtc-motos-09.png" alt="Honda Elite Scooter" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Honda</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Honda Elite Scooter</h3>
               <p class="bike__meta">Honda · 0km · Scooter</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -1064,11 +1460,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/marca-mtc-motos-09.png" alt="Honda PCX 160" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Honda</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Honda PCX 160</h3>
               <p class="bike__meta">Honda · 0km · Scooter</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -1087,11 +1489,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/54c-0img-web-colores-cb300f-rojo.jpg" alt="Honda CBF 125 Twister" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Honda</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Honda CBF 125 Twister</h3>
               <p class="bike__meta">Honda · 0km · Twister</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -1110,11 +1518,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/marca-mtc-motos-08.png" alt="Honda GLH 150 Gaucha" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Honda</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Honda GLH 150 Gaucha</h3>
               <p class="bike__meta">Honda · 0km · Gaucha</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -1133,11 +1547,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/xr190l-e1741889601545.jpg" alt="Honda NX 190" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Honda</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Honda NX 190</h3>
               <p class="bike__meta">Honda · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -1156,11 +1576,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/54c-0img-web-colores-cb300f-rojo.jpg" alt="Honda CB 190 Twister" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Honda</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Honda CB 190 Twister</h3>
               <p class="bike__meta">Honda · 0km · Twister</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -1179,11 +1605,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/54c-0img-web-colores-cb300f-rojo.jpg" alt="Honda Cb 300 F Twister" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Honda</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Honda Cb 300 F Twister</h3>
               <p class="bike__meta">Honda · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -1202,11 +1634,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/marca-mtc-motos-08.png" alt="Honda Xr 150 L" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Honda</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Honda Xr 150 L</h3>
               <p class="bike__meta">Honda · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -1225,11 +1663,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/xr190l-e1741889601545.jpg" alt="Honda Xr 190 L" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Honda</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Honda Xr 190 L</h3>
               <p class="bike__meta">Honda · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -1248,11 +1692,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/346_0s-0370-0s-0img-web-tornado-2024-roja.jpg" alt="Honda XR 300 L Tornado" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Honda</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Honda XR 300 L Tornado</h3>
               <p class="bike__meta">Honda · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -1271,11 +1721,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/346_0s-0370-0s-0img-web-tornado-2024-roja.jpg" alt="Honda XR 300 L Tornado SE Rally" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Honda</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Honda XR 300 L Tornado SE Rally</h3>
               <p class="bike__meta">Honda · 0km · SE Rally</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -1294,11 +1750,17 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/YBR.jpg" alt="Yamaha YBR 125 Z" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Yamaha</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Yamaha YBR 125 Z</h3>
               <p class="bike__meta">Yamaha · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
             </div>
           </article>
@@ -1317,19 +1779,154 @@
           >
             <div class="bike__media">
               <img src="assets/images/catalog/XTZ.jpg" alt="Yamaha XTZ 125" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge">Solo DNI</span>
+                <span class="bike__badge bike__badge--stock">Stock</span>
+              </div>
               <span class="bike__tag">Yamaha</span>
             </div>
             <div class="bike__body">
               <h3 class="bike__name">Yamaha XTZ 125</h3>
               <p class="bike__meta">Yamaha · 0km</p>
+              <p class="bike__cuota">Cuotas con DNI · Consultar</p>
+              <p class="bike__price">Precio y plan por WhatsApp</p>
               <span class="bike__link">Ver especificaciones</span>
+            </div>
+          </article>
+
+          <article
+            class="bike"
+            data-category="usadas"
+            data-reveal
+            tabindex="0"
+            role="button"
+            aria-label="Consultar motos usadas disponibles"
+            data-name="Usadas seleccionadas"
+            data-tag="Usadas"
+            data-meta="Usada · Stock rotativo"
+            data-desc="El stock de usadas cambia semana a semana. Escribinos y te pasamos lo disponible, con revisión y opción de parte de pago."
+            data-specs="[{&quot;label&quot;:&quot;Estado&quot;,&quot;value&quot;:&quot;Usada seleccionada&quot;},{&quot;label&quot;:&quot;Revisión&quot;,&quot;value&quot;:&quot;Incluida&quot;},{&quot;label&quot;:&quot;Financiación&quot;,&quot;value&quot;:&quot;Consultar&quot;},{&quot;label&quot;:&quot;Parte de pago&quot;,&quot;value&quot;:&quot;Sí&quot;}]"
+          >
+            <div class="bike__media">
+              <img src="assets/images/stories/moto-usada.jpg" alt="Motos usadas MTC" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge bike__badge--used">Usada</span>
+                <span class="bike__badge bike__badge--stock">Consultar</span>
+              </div>
+              <span class="bike__tag">Usadas</span>
+            </div>
+            <div class="bike__body">
+              <h3 class="bike__name">Usadas seleccionadas</h3>
+              <p class="bike__meta">Usada · Stock rotativo</p>
+              <p class="bike__cuota">Consultá disponibilidad</p>
+              <p class="bike__price">Tasación y parte de pago</p>
+              <span class="bike__link">Consultar usadas</span>
+            </div>
+          </article>
+
+          <article
+            class="bike"
+            data-category="usadas"
+            data-reveal
+            tabindex="0"
+            role="button"
+            aria-label="Traé tu moto como parte de pago"
+            data-name="Parte de pago"
+            data-tag="Usadas"
+            data-meta="Usada · Parte de pago"
+            data-desc="Recibimos tu moto usada como parte de pago. Contanos marca, modelo, año y kilómetros y te damos una orientación."
+            data-specs="[{&quot;label&quot;:&quot;Servicio&quot;,&quot;value&quot;:&quot;Parte de pago&quot;},{&quot;label&quot;:&quot;Tasación&quot;,&quot;value&quot;:&quot;Sin cargo&quot;},{&quot;label&quot;:&quot;Respuesta&quot;,&quot;value&quot;:&quot;Por WhatsApp&quot;}]"
+          >
+            <div class="bike__media">
+              <img src="assets/images/stories/moto-usada.jpg" alt="Parte de pago MTC" loading="lazy" />
+              <div class="bike__badges">
+                <span class="bike__badge bike__badge--used">Parte de pago</span>
+              </div>
+              <span class="bike__tag">Usadas</span>
+            </div>
+            <div class="bike__body">
+              <h3 class="bike__name">Parte de pago</h3>
+              <p class="bike__meta">Usada · Tasación</p>
+              <p class="bike__cuota">Recibimos tu moto</p>
+              <p class="bike__price">Orientación sin cargo</p>
+              <span class="bike__link">Tasar mi moto</span>
             </div>
           </article>
         </div>
         <div class="catalog__cta reveal" data-reveal>
-          <a class="btn btn--primary" href="https://wa.me/543433023616?text=Hola%20MTC%20Motos%2C%20quiero%20consultar%20por%20una%20moto%20del%20cat%C3%A1logo" target="_blank" rel="noopener noreferrer">
-            Consultar disponibilidad
+          <a class="btn btn--primary" href="https://wa.me/543433023616?text=Hola%20MTC%20Motos%2C%20quiero%20consultar%20cuota%20solo%20con%20DNI" target="_blank" rel="noopener noreferrer">
+            Consultar cuota con DNI
           </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- USADAS -->
+    <section class="section used" id="usadas">
+      <div class="container">
+        <header class="section__head reveal" data-reveal>
+          <p class="eyebrow">Usadas</p>
+          <h2 class="section__title">Usadas y parte de pago</h2>
+          <p class="section__desc">Stock rotativo de usadas revisadas, y también recibimos la tuya para bajar el anticipo de la 0km.</p>
+        </header>
+
+        <div class="used__panel reveal" data-reveal>
+          <div>
+            <h3>¿Tenés una moto para entregar?</h3>
+            <p class="section__desc" style="margin:0">Mandanos fotos, año y kilómetros. Te damos una orientación y vemos cómo combinarla con financiación solo con DNI.</p>
+          </div>
+          <div class="used__actions">
+            <a class="btn btn--primary" href="https://wa.me/5434346410955?text=Hola%20MTC%2C%20quiero%20tasar%20mi%20moto%20usada" target="_blank" rel="noopener noreferrer">Tasar mi moto</a>
+            <a class="btn btn--outline" href="#catalogo" data-jump-usadas>Ver filtro Usadas</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIMULADOR -->
+    <section class="section sim" id="simulador">
+      <div class="container">
+        <header class="section__head reveal" data-reveal>
+          <p class="eyebrow">Cuotas</p>
+          <h2 class="section__title">Simulá tu plan</h2>
+          <p class="section__desc">Estimación orientativa para charlar el plan real. El valor final te lo confirmamos por WhatsApp según modelo y anticipo.</p>
+        </header>
+
+        <div class="sim__panel reveal" data-reveal>
+          <form class="sim__fields" id="simForm">
+            <div class="sim__field sim__field--full">
+              <label for="simModel">Modelo</label>
+              <select id="simModel" name="model">
+                <option value="">Elegí una moto</option>
+              </select>
+            </div>
+            <div class="sim__field">
+              <label for="simPrice">Precio aproximado ($)</label>
+              <input id="simPrice" name="price" type="number" min="0" step="1000" placeholder="Ej: 2500000" />
+            </div>
+            <div class="sim__field">
+              <label for="simDown">Anticipo (%)</label>
+              <input id="simDown" name="down" type="number" min="0" max="90" value="20" />
+            </div>
+            <div class="sim__field">
+              <label for="simCuotas">Cantidad de cuotas</label>
+              <select id="simCuotas" name="cuotas">
+                <option value="6">6</option>
+                <option value="12" selected>12</option>
+                <option value="18">18</option>
+                <option value="24">24</option>
+                <option value="36">36</option>
+                <option value="48">48</option>
+              </select>
+            </div>
+          </form>
+
+          <div class="sim__result">
+            <p>Cuota estimada<strong id="simCuotaOut">—</strong></p>
+            <p class="sim__note" id="simTotalOut">Ingresá un precio aproximado para estimar</p>
+            <a class="btn btn--primary" id="simWhatsapp" href="https://wa.me/543433023616" target="_blank" rel="noopener noreferrer">Consultar este plan</a>
+            <p class="sim__note">No es un plan oficial: es una guía para pedirnos la cotización real solo con DNI.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -1360,9 +1957,47 @@
           </article>
           <article class="service reveal" data-reveal>
             <span class="service__num">04</span>
-            <h3>Financiación</h3>
-            <p>Varias formas de pago para que salgas rodando más rápido.</p>
+            <h3>Solo con DNI</h3>
+            <p>Financiación simple: te armamos el plan y salís rodando más rápido.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+      <div class="container">
+        <header class="section__head reveal" data-reveal>
+          <p class="eyebrow">Preguntas frecuentes</p>
+          <h2 class="section__title">Antes de escribirnos</h2>
+          <p class="section__desc">Las dudas más comunes sobre financiación, entrega y parte de pago.</p>
+        </header>
+
+        <div class="faq__list reveal" data-reveal>
+          <details class="faq__item">
+            <summary>¿Puedo llevarme una moto solo con DNI?</summary>
+            <p>Sí. Trabajamos planes de financiación con DNI. Según el modelo y el anticipo, te pedimos lo mínimo necesario y te lo explicamos sin vueltas.</p>
+          </details>
+          <details class="faq__item">
+            <summary>¿Necesito recibo de sueldo?</summary>
+            <p>Depende del plan y del monto. En muchos casos se puede avanzar con DNI; si hace falta un comprobante, te lo decimos al armar la cotización.</p>
+          </details>
+          <details class="faq__item">
+            <summary>¿Cuánto tarda la entrega?</summary>
+            <p>Si hay stock del color que querés, la entrega puede ser rápida una vez aprobado el plan. Consultanos el modelo y te confirmamos disponibilidad.</p>
+          </details>
+          <details class="faq__item">
+            <summary>¿Aceptan mi moto usada?</summary>
+            <p>Sí. La tomamos como parte de pago. Mandanos fotos, año y kilómetros por WhatsApp y te damos una orientación.</p>
+          </details>
+          <details class="faq__item">
+            <summary>¿Los precios del simulador son finales?</summary>
+            <p>No: son una guía para charlar el plan. El valor real de cuota te lo confirmamos según moto, anticipo y condiciones del momento.</p>
+          </details>
+          <details class="faq__item">
+            <summary>¿Atienden por WhatsApp?</summary>
+            <p>Sí. Es la forma más rápida: te pasamos stock, cuotas y requisitos. También podés pasar por el local en Paraná.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -1387,7 +2022,7 @@
           <p class="eyebrow">Nuestro local</p>
           <h2 class="section__title">Te esperamos en Paraná</h2>
           <p class="section__desc">
-            Calle Almirante Brown 787, Paraná, Entre Ríos. Pasá a ver el stock en persona o escribinos antes y te reservamos la moto.
+            Calle Almirante Brown 787, Paraná, Entre Ríos. Pasá a ver el stock o escribinos y te reservamos la moto.
           </p>
           <ul class="local__facts">
             <li>
@@ -1397,6 +2032,10 @@
             <li>
               <strong>Ciudad</strong>
               <span>Paraná, Entre Ríos</span>
+            </li>
+            <li>
+              <strong>Horarios</strong>
+              <span class="local__hours">Lun a Vie 9–13 y 16–20 · Sáb 9–13</span>
             </li>
             <li>
               <strong>WhatsApp</strong>
@@ -1418,11 +2057,14 @@
 
         <div class="local__visual reveal" data-reveal>
           <div class="local__frame">
-            <img
-              src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80"
-              alt="Ambiente de showroom automotor"
+            <iframe
+              class="local__map"
+              title="Mapa MTC Motos — Almirante Brown 787, Paraná"
               loading="lazy"
-            />
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://maps.google.com/maps?q=Almirante%20Brown%20787%2C%20Paran%C3%A1%2C%20Entre%20R%C3%ADos&z=16&output=embed"
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
       </div>
@@ -1434,10 +2076,28 @@
         <div>
           <p class="eyebrow">Contacto</p>
           <h2 class="section__title">Escribinos y arrancamos</h2>
-          <p class="section__desc">Respondemos por WhatsApp, Instagram y Facebook. Contanos modelo, presupuesto o si querés traer tu moto como parte de pago.</p>
+          <p class="section__desc">Dejanos tus datos y te abrimos WhatsApp con el mensaje armado. También estamos en Instagram y Facebook.</p>
+
+          <form class="lead" id="leadForm">
+            <div class="lead__row">
+              <input type="text" name="name" placeholder="Tu nombre" required autocomplete="name" />
+              <input type="tel" name="phone" placeholder="WhatsApp / teléfono" required autocomplete="tel" />
+            </div>
+            <div class="lead__row">
+              <select name="interest" required>
+                <option value="financiación solo con DNI">Financiación solo con DNI</option>
+                <option value="consultar stock 0km">Consultar stock 0km</option>
+                <option value="motos usadas">Motos usadas</option>
+                <option value="parte de pago">Parte de pago</option>
+              </select>
+              <input type="text" name="model" placeholder="Modelo que te interesa (opcional)" autocomplete="off" />
+            </div>
+            <button class="btn btn--primary btn--lg" type="submit">Enviar por WhatsApp</button>
+            <p class="lead__hint">No guardamos datos en un servidor: se abre WhatsApp con tu consulta lista para mandar.</p>
+          </form>
         </div>
         <div class="contact__actions">
-          <a class="btn btn--primary btn--lg" href="https://wa.me/543433023616" target="_blank" rel="noopener noreferrer">WhatsApp 343 302-3616</a>
+          <a class="btn btn--primary btn--lg" href="https://wa.me/543433023616?text=Hola%20MTC%20Motos%2C%20quiero%20financiar%20solo%20con%20DNI" target="_blank" rel="noopener noreferrer">WhatsApp 343 302-3616</a>
           <a class="btn btn--outline btn--lg" href="https://www.instagram.com/mtcmotos/" target="_blank" rel="noopener noreferrer">Instagram @mtcmotos</a>
           <a class="btn btn--outline btn--lg" href="https://www.facebook.com/multimarca.motosyrepuestos" target="_blank" rel="noopener noreferrer">Facebook</a>
         </div>
@@ -1528,6 +2188,7 @@
   <script src="js/catalog.js" defer></script>
   <script src="js/modal.js" defer></script>
   <script src="js/stories.js" defer></script>
+  <script src="js/commerce.js" defer></script>
   <script src="js/animations.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>

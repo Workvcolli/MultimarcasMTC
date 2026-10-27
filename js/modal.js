@@ -68,7 +68,9 @@
       specLabels.forEach(([key, label]) => addSpec(label, bike.dataset[key]));
     }
 
-    const msg = encodeURIComponent(`Hola MTC Motos, quiero consultar por ${name}`);
+    const msg = encodeURIComponent(
+      `Hola MTC Motos, quiero consultar por ${name}. ¿Me pasan precio y cuotas solo con DNI?`
+    );
     els.whatsapp.href = `https://wa.me/543433023616?text=${msg}`;
   };
 
